@@ -122,8 +122,8 @@ namespace ПЧМИ
             else if (radioButton6.Checked) pay = "СБП";
             tracknumber = rnd.Next(100000, 1000000);
             label41.Text = tracknumber.ToString();
-            if (checkBox1.Checked && textBox6.Text != "") other += textBox6.Text + "\n";
-            if (checkBox2.Checked && textBox7.Text != "") other += textBox7.Text + "\n";
+            if (checkBox1.Checked && textBox6.Text != "") other += "\nУведомления на номер " + textBox6.Text;
+            if (checkBox2.Checked && textBox7.Text != "") other += "\nУведомления на почту " + textBox7.Text;
             FileInfo fileInfo = new FileInfo(@"C:\Users\Windows 10\Desktop\pochta.xlsx");
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             if (!fileInfo.Exists)
