@@ -66,6 +66,15 @@ namespace ПЧМИ
             fio2 = textBox4.Text;
             adr2 = textBox3.Text;
             weigth = textBox5.Text;
+            
+            if (string.IsNullOrEmpty(fio1) || string.IsNullOrEmpty(adr1) || string.IsNullOrEmpty(fio2) || string.IsNullOrEmpty(adr2) || string.IsNullOrEmpty(weigth))
+            {
+               MessageBox.Show("Заполните все поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               return;
+            }
+            else
+                tabControl1.SelectedIndex = 2;
+
             if (int.TryParse(weigth, out wei))
             {
                 Console.WriteLine("Число: " + wei);
@@ -75,13 +84,6 @@ namespace ПЧМИ
                 MessageBox.Show("Значение веса посылки не является числом", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (string.IsNullOrEmpty(fio1) || string.IsNullOrEmpty(adr1) || string.IsNullOrEmpty(fio2) || string.IsNullOrEmpty(adr2) || string.IsNullOrEmpty(weigth))
-            {
-               MessageBox.Show("Заполните все поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               return;
-            }
-            else
-                tabControl1.SelectedIndex = 2;
 
         }
 
@@ -116,8 +118,8 @@ namespace ПЧМИ
             else
                 tabControl1.SelectedIndex = 4;
             if (radioButton4.Checked) pay = "Наличные";
-            else if (radioButton4.Checked) pay = "Банковская карта";
-            else if (radioButton4.Checked) pay = "СБП";
+            else if (radioButton5.Checked) pay = "Банковская карта";
+            else if (radioButton6.Checked) pay = "СБП";
             tracknumber = rnd.Next(100000, 1000000);
             label41.Text = tracknumber.ToString();
             if (checkBox1.Checked && textBox6.Text != "") other += textBox6.Text + "\n";
@@ -144,6 +146,7 @@ namespace ПЧМИ
                     worksheet.Cells["I1"].Value = "Трэк-номер";
                     worksheet.Cells["J1"].Value = "Цена (руб.)";
                     worksheet.Cells["K1"].Value = "Местоположение";
+                    worksheet.Cells["L1"].Value = "Статус посылки";
                     // Сохраняем файл
                     package.Save();
                 }
@@ -294,8 +297,9 @@ namespace ПЧМИ
                         string tracknumber = worksheet.Cells[row, 9].GetValue<string>();
                         string price = worksheet.Cells[row, 10].GetValue<string>();
                         string location = worksheet.Cells[row, 11].GetValue<string>();
+                        string status = worksheet.Cells[row, 12].GetValue<string>();
 
-                        MessageBox.Show($"Местоположение: {location}\nФИО отправителя: {fio1}\nАдрес отправителя: {adr1}\nФИО получателя: {fio2}\nАдрес получателя: {adr2}\nВид доставки: {delivery}\nДополнительные опции: {other}\nСпособ оплаты: {paymentMethod}\nТрек-номер: {trackNumber}\nЦена (руб.): {price}", "Результат поиска", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Местоположение: {location}\nСтатус посылки: {status}\n ФИО отправителя: {fio1}\nАдрес отправителя: {adr1}\nФИО получателя: {fio2}\nАдрес получателя: {adr2}\nВид доставки: {delivery}\nДополнительные опции: {other}\nСпособ оплаты: {paymentMethod}\nТрек-номер: {trackNumber}\nЦена (руб.): {price}", "Результат поиска", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return; // Прерываем выполнение метода после вывода первого совпадения
                     }
                 }
