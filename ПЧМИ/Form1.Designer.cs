@@ -152,10 +152,10 @@ namespace ПЧМИ
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(-2, 0);
+            this.tabControl1.Location = new System.Drawing.Point(-2, -25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1235, 661);
+            this.tabControl1.Size = new System.Drawing.Size(1235, 686);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -169,7 +169,7 @@ namespace ПЧМИ
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1227, 632);
+            this.tabPage1.Size = new System.Drawing.Size(1227, 657);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Главная страница";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -433,7 +433,7 @@ namespace ПЧМИ
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1227, 657);
+            this.tabPage3.Size = new System.Drawing.Size(1227, 632);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Способ доставки";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -602,7 +602,7 @@ namespace ПЧМИ
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1227, 657);
+            this.tabPage4.Size = new System.Drawing.Size(1227, 632);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Расчет стоимости";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -874,7 +874,7 @@ namespace ПЧМИ
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1227, 657);
+            this.tabPage5.Size = new System.Drawing.Size(1227, 632);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Оформление";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -993,7 +993,7 @@ namespace ПЧМИ
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1227, 657);
+            this.tabPage6.Size = new System.Drawing.Size(1227, 632);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Отслеживание";
             this.tabPage6.UseVisualStyleBackColor = true;
